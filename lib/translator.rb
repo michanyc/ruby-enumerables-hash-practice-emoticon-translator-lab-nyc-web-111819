@@ -15,10 +15,10 @@ result
 end
 
 def get_japanese_emoticon(file_path, e_emoticon)
-  emos = load_library(file_path)
-  emos
-  if emos[:get_emoticon].include?(e_emoticon)
-    emos[:get_emoticon][e_emoticon]
+  translator = load_library(file_path)
+  translator
+  if translator[:get_emoticon].include?(e_emoticon)
+    translator[:get_emoticon][e_emoticon]
   else
     "Sorry, that emoticon was not found"
   end
